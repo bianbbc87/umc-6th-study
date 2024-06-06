@@ -1,10 +1,12 @@
 package umc.study.Ateam.converter;
 
+import umc.study.Ateam.domain.Member;
 import umc.study.Ateam.domain.enums.Gender;
 import umc.study.Ateam.web.dto.MemberRequestDTO;
 import umc.study.Ateam.web.dto.MemberResponseDTO;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class MemberConverter {
 

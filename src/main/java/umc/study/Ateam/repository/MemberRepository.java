@@ -1,8 +1,8 @@
 package umc.study.Ateam.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import umc.study.Ateam.domain.Member;
 
-import java.lang.reflect.Member;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
 }
