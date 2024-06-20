@@ -24,7 +24,7 @@ public class ReviewController {
     private final MissionService missionService;
 
     @PostMapping("/{storeId}/reviews")
-    public ApiResponse<Review> addReviewToStore(@PathVariable Long storeId, @RequestBody ReviewRequestDTO requestDTO) {
+    public ApiResponse<Review> addReviewToStore(@PathVariable Long storeId, @RequestBody ReviewRequestDTO.ReviewDTO requestDTO) {
         Review review = reviewService.addReviewToStore(storeId, requestDTO);
         return ApiResponse.onSuccess(review);
     }

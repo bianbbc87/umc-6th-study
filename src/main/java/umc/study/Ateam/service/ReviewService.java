@@ -21,7 +21,7 @@ public class ReviewService {
     private final ReviewRepository reviewRepository;
     private final ReviewConverter reviewConverter;
 
-    public Review addReviewToStore(Long storeId, ReviewRequestDTO requestDTO) {
+    public Review addReviewToStore(Long storeId, ReviewRequestDTO.ReviewDTO requestDTO) {
         Store store = storeRepository.findById(storeId)
                 .orElseThrow(() -> new AppHandler(ErrorStatus.STORE_NOT_FOUND));
         Member member = memberRepository.findById(requestDTO.getMemberId())
