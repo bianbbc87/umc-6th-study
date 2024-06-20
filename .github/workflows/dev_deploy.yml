@@ -1,9 +1,14 @@
 name: UMC Dev CI/CD
 
+permissions:
+  checks: write
+  pull-requests: write
+
 on:
+  push:  # push 이벤트 추가
   pull_request:
-    types: [closed]
-  workflow_dispatch: # 수동 실행도 가능하도록
+    types: [opened, synchronize, reopened, closed]
+  workflow_dispatch:  # 수동 실행도 가능
 
 jobs:
   build:
