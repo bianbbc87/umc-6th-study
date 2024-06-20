@@ -57,8 +57,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: breifing-dev
-          environment_name: Breifing-dev-env
+          application_name: umc-6th-cicd
+          environment_name: Umc-6th-cicd-env
           version_label: github-action-${{ steps.current-time.outputs.formattedTime }}
           region: ap-northeast-3
           deployment_package: deploy/deploy.zip
