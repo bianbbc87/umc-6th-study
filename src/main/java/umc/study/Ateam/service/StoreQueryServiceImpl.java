@@ -30,4 +30,11 @@ public class StoreQueryServiceImpl implements StoreQueryService{
         Page<Review> StorePage = reviewRepository.findAllByStore(store, PageRequest.of(page, 10));
         return StorePage;
     }
+
+    // 내가 작성한 리뷰 조회
+    @Override
+    public Page<Review> getMemberReviewList(Long memberId, Integer page) {
+        Page<Review> MemberPage = reviewRepository.findAllByMemberId(memberId, PageRequest.of(page, 10));
+        return MemberPage;
+    }
 }

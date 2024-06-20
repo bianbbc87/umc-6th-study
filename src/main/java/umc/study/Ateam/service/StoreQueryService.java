@@ -10,4 +10,6 @@ public interface StoreQueryService {
     Optional<Store> findStore(Long id);
 
     Page<Review> getReviewList(Long StoreId, Integer page);
+
+    Page<Review> getMemberReviewList(Long memberId, Integer page);
 }

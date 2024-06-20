@@ -10,4 +10,6 @@ import umc.study.Ateam.domain.Store;
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long> {
     Page<Review> findAllByStore(Store store, PageRequest pageRequest);
+
+    Page<Review> findAllByMemberId(Long memberId, PageRequest pageRequest);
 }

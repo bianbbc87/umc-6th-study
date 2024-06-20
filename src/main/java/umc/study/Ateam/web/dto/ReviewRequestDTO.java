@@ -42,4 +42,18 @@ public class ReviewRequestDTO {
         String body;
         LocalDate createdAt;
     }
+
+    // 내가 작성한 리뷰
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ReviewMemberPreViewListDTO {
+        List<ReviewPreViewDTO> reviewList;
+        Integer listSize;
+        Integer totalPage;
+        Long totalElements;
+        Boolean isFirst;
+        Boolean isLast;
+    }
 }
