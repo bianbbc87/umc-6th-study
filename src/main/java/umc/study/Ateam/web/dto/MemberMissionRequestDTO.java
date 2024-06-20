@@ -7,7 +7,7 @@ public class MemberMissionRequestDTO {
 
     @Data
     @Builder
-    public  class MemberMissionDTO {
+    public static class MemberMissionDTO {
         private Long memberId;
         private Long missionId;
     }
