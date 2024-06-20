@@ -64,7 +64,7 @@ public class ReviewController {
     @Parameters({
             @Parameter(name = "storeId", description = "가게의 아이디, path variable 입니다!")
     })
-    public ApiResponse<ReviewRequestDTO.ReviewMemberPreViewListDTO> getMemberReviewList(@PathVariable(name = "storeId") Long memberId, @RequestParam(name = "page") Integer page){
+    public ApiResponse<ReviewRequestDTO.ReviewMemberPreViewListDTO> getMemberReviewList(@PathVariable(name = "memberId") Long memberId, @RequestParam(name = "page") Integer page){
 
         ReviewRequestDTO.ReviewMemberPreViewListDTO reviews = (ReviewRequestDTO.ReviewMemberPreViewListDTO) storeQueryService.getMemberReviewList(memberId, page);
         return ApiResponse.onSuccess(reviews);
