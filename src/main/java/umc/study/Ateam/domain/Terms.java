@@ -26,6 +26,5 @@ public class Terms extends BaseEntity {
     private Boolean optional;
 
     @OneToMany(mappedBy = "terms", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<MemberAgree> memberAgreeList = new ArrayList<>();
 }

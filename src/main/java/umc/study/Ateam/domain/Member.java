@@ -59,18 +59,14 @@ public class Member extends BaseEntity {
     private Integer point;
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<MemberAgree> memberAgreeList = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<MemberPrefer> memberPreferList = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<Review> reviewList = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<MemberMission> memberMissionList = new ArrayList<>();
 }

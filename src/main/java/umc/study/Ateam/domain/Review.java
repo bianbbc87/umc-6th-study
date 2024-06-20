@@ -32,7 +32,6 @@ public class Review extends BaseEntity {
     private Store store;
 
     @OneToMany(mappedBy = "review", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<ReviewImage> reviewImageList;
 
     public void setMember(Member member){

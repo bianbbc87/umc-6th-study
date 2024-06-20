@@ -29,10 +29,8 @@ public class Store extends BaseEntity {
     private Region region;
 
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<Mission> missionList = new ArrayList<>();
 
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
-    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<Review> reviewList = new ArrayList<>();
 }
