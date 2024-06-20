@@ -60,6 +60,6 @@ jobs:
           application_name: umc-6th-elasticbeanstalk
           environment_name: Umc-6th-elasticbeanstalk-env
           version_label: github-action-${{ steps.current-time.outputs.formattedTime }}
-          region: ap-northeast-2a
+          region: ap-northeast-2
           deployment_package: deploy/deploy.zip
           wait_for_deployment: false
