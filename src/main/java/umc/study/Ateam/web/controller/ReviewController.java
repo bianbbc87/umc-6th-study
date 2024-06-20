@@ -62,7 +62,7 @@ public class ReviewController {
             @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "AUTH006", description = "acess 토큰 모양이 이상함",content = @Content(schema = @Schema(implementation = ApiResponse.class))),
     })
     @Parameters({
-            @Parameter(name = "storeId", description = "가게의 아이디, path variable 입니다!")
+            @Parameter(name = "memberId", description = "멤버의 아이디, path variable 입니다!")
     })
     public ApiResponse<ReviewRequestDTO.ReviewMemberPreViewListDTO> getMemberReviewList(@PathVariable(name = "memberId") Long memberId, @RequestParam(name = "page") Integer page){
 
