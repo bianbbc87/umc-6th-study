@@ -21,5 +21,6 @@ public class Region extends BaseEntity {
     private String name;
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL)
+    @Builder.Default // 표현식을 빌더의 기본값으로 사용
     private List<Store> storeList = new ArrayList<>();
 }
